@@ -1,0 +1,116 @@
+/* Buttons */
+.btn-custom {
+  font-weight: bold;
+  transition: 0.3s;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+
+.btn-primary-custom {
+  background-color: #007bff;
+}
+
+.btn-primary-custom:hover {
+  background-color: #0056b3;
+}
+
+.btn-success-custom {
+  background-color: #28a745;
+}
+
+.btn-success-custom:hover {
+  background-color: #218838;
+}
+
+form .form-control.custom-input {
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  border: 1px solid #ccc !important;
+  transition: all 0.3s ease !important;
+}
+
+form .form-control.custom-input:focus {
+  border-color: #007bff !important;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5) !important;
+  outline: none !important;
+}
+
+/* Links */
+.text-link {
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.text-link:hover {
+  color: #0056b3;
+}
+
+/* Navbar */
+.navbar-custom {
+  padding: 15px;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #343a40;
+  color: white;
+  height: 100vh;
+  padding: 15px;
+}
+
+.sidebar h4 {
+  color: #f8f9fa;
+}
+
+.sidebar-link {
+  color: #f8f9fa !important;
+  padding: 10px 0;
+  display: block;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sidebar-link:hover {
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hide Sidebar on small screens */
+@media (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    flex: 1;
+  }
+}
+
+.news-container {
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-scrollable {
+  overflow-y: auto;
+  max-height: 79vh;
+  padding-right: 10px;
+}
+
+/* Optional: Hide scrollbar */
+.news-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.news-scrollable::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
