@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useAuthenticationStatus } from "@nhost/react";
+import { Navigate } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 
 const dummyNews = [
@@ -26,7 +28,16 @@ const dummyNews = [
 ];
 
 export default function NewsFeed({ savedArticles = [], setSavedArticles }) {
+    const { isAuthenticated, isLoading } = useAuthenticationStatus();
     const [readArticles, setReadArticles] = useState([]);
+
+    if (isLoading) {
+        return <p className="text-center my-5">Checking authentication...</p>;
+    }
+
+    if (!isAuthenticated) {
+        return <Navigate to="/login" replace />;
+    }
 
     const markAsRead = (id) => {
         setReadArticles([...readArticles, id]);
